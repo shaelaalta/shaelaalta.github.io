@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Unica+One|Zilla+Slab');
+
+/************************************
+font-family: 'Unica One', cursive;
+font-family: 'Zilla Slab', serif;
+*************************************/
+
+h1{
+    font-family: 'Unica One', cursive;
+}
+
+body {
+    font-family: 'Zilla Slab', serif;
+}
+
+header {
+    padding-left: 6vw;
+}
+
+#home {
+    text-align: center;
+}
