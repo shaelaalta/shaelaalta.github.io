@@ -21,6 +21,20 @@ header {
     padding-left: 6vw;
 }
 
+#bigPic {
+    width: 100%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #home {
     text-align: center;
+}
+
+#quizPic {
+    width: 50vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
