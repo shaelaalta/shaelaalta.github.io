@@ -1,25 +1,30 @@
 <ARTSHOW>
-    <ARTIST>Leonardo Da Vinci
+    <ARTIST>
+        <NAME>Leonardo Da Vinci</NAME>
         <ART>benois-madonna.jpg</ART>
         <ART>lady-with-an-ermine.jpg</ART>
         <ART>st-john-the-baptist.jpg</ART>
     </ARTIST>
-    <ARTIST>Remembrant
+    <ARTIST>
+        <NAME>Remembrant</NAME>
         <ART>remem1.jpg</ART>
         <ART>remem2.jpg</ART>
         <ART>remem.jpg</ART>
     </ARTIST>
-    <ARTIST>Vincent Van Gogh
+    <ARTIST>
+        <NAME>Vincent Van Gogh</NAME>
         <ART>van.jpg</ART>
         <ART>van1.jpg</ART>
         <ART>van2.jpg</ART>
     </ARTIST>
-    <ARTIST>Raphael
+    <ARTIST>
+        <NAME>Raphael</NAME>
         <ART>raph.jpg</ART>
         <ART>raph1.jpg</ART>
         <ART>raph2.jpg</ART>
     </ARTIST>
-    <ARTIST>Claude Monet
+    <ARTIST>
+        <NAME>Claude Monet</NAME>
         <ART>mon.jpg</ART>
         <ART>mon1.jpg</ART>
         <ART>mon2.jpg</ART>

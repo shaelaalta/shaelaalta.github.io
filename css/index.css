@@ -38,3 +38,15 @@ header {
     margin-left: auto;
     margin-right: auto;
 }
+
+.answers {
+    display: none;
+}
+
+.answers img{
+    width: 20px;
+}
+
+#parts{
+    display: block;
+}

@@ -63,8 +63,7 @@ function shuffle(array, item){
   }
     
     var showThem = arrangeIt(array, item);
-
-  return showThem;
+    return showThem;
 }
 
 /*******************************
@@ -113,16 +112,45 @@ function myFunction(xml){
     }
     else {
         var i;
-        var name = xmlDoc.getElementsByTagName("ARTIST")[number].childNodes[0].nodeValue;
+        var name = xmlDoc.getElementsByTagName("ARTIST")[number].getElementsByTagName("NAME")[0].childNodes[0].nodeValue;
+        correct = name;
         var artistList = shuffle(artists, name);
-        var show = "<p><img id='quizPic' src='/images/";
+        var show = "<p id='sayIt'><img id='quizPic' src='/images/";
         show += xmlDoc.getElementsByTagName("ARTIST")[number].getElementsByTagName("ART")[lilNum].childNodes[0].nodeValue + "'></p>";
         
         for(i = 0; i < artistList.length; i++){
-            show += "<button>" + artistList[i] + "</button>";
+            if(artistList[i] == name){
+                show += "<div id='parts'><div class='answers'><img src='/images/graphics/yes.png'></div>"
+            }
+            else {
+            show += "<div id='parts'><div class='answers'><img src='/images/graphics/no.png'></div>";
+            }
+            show += "<button onclick='submitAnswer(\"" + artistList[i] + "\")'>" + artistList[i] + "</button></div>";
         }
         
         show += "<button onclick='loadDoc()'>Next Question</button>";
         document.getElementById("home").innerHTML = show;
+    }
+}
+
+/**************************************
+* check submitted answer
+***************************************/
+function submitAnswer(answer){
+    var announce = document.createElement("h1");
+    var node;
+    if(correct == answer){
+        node = document.createTextNode("Correct Answer!");
+    }
+    else{
+        node = document.createTextNode("Wrong Answer");
+    }
+    announce.appendChild(node);
+    var element = document.getElementById("sayIt");
+    element.appendChild(announce);
+    var pics = document.getElementsByClassName("answers");
+    var i;
+    for(i = 0; i < pics.length; i++){
+        pics[i].style.display = "inline";
     }
 }
