@@ -77,24 +77,22 @@ function arrangeIt(array, item){
     var m;
     var hit = false;
     var list = [];
-    for(i = 0; i < array.length; i++){
+    for(i = 0; i < 3; i++){
         console.log(array[i]);
         if(array[i] == item){
-            hit = true; }
-        
-        if(array[i + 2] == item){
-            hit = true; }
-        
-        if(hit == true){
-            console.log(array[i]);
-            list.push(array[i]);
+            hit = true;
         }
-        
-        if(list.length == 3){
-            break; }
+        list.push(array[i]);
     }
     console.log(list);
-    return list;
+    if(hit == true){
+        return list
+    }
+    else{
+        replaceNum = getNumber(3);
+        list[replaceNum] = item;
+        return list;
+    }
 }
 
 /***********************************
@@ -115,8 +113,7 @@ function myFunction(xml){
     }
     else {
         var i;
-        var name = artists[number];
-        var correct = name;
+        var name = xmlDoc.getElementsByTagName("ARTIST")[number].childNodes[0].nodeValue;
         var artistList = shuffle(artists, name);
         var show = "<p><img id='quizPic' src='/images/";
         show += xmlDoc.getElementsByTagName("ARTIST")[number].getElementsByTagName("ART")[lilNum].childNodes[0].nodeValue + "'></p>";
